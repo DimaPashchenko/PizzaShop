@@ -3,7 +3,17 @@
 <div class="row">
 	<% @products.each do |p| %>
 	<div class="col-md-3">
-		<%= p.title %>
+		<div>
+			<b><%= p.title %></b>
+		</div>
+
+		<div>
+			<img src="<%= p.path_to_image %>">
+		</div>
+
+		<div>
+			<%= p.description %>
+		</div>       
 	</div>
 	<%end%>
 </div>
