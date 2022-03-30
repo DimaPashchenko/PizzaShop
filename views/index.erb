@@ -8,12 +8,20 @@
 		</div>
 
 		<div>
-			<img src="<%= p.path_to_image %>">
+			<img src="<%= p.path_to_image %>" width="250" height="200" />
 		</div>
 
 		<div>
 			<%= p.description %>
-		</div>       
+		</div>
+
+		<div>
+			Size: <%= p.size %> cm
+		</div>
+
+		<div>
+			Price:<%= p.price %> UAH
+		</div>     
 	</div>
 	<%end%>
 </div>
