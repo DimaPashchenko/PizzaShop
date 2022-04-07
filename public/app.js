@@ -25,7 +25,7 @@ function add_to_cart(id)
 
 function update_orders_input()
 {
-	var orders =cart_get_orders();
+	var orders = cart_get_orders();
 	$('#orders_input').val(orders) //# означає що звертаємося по id
 }
 
