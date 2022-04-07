@@ -18,7 +18,15 @@ function add_to_cart(id)
 	window.localStorage.setItem(key, x);
 
 	//виводить  кіл-сть пицци у корзині
-	alert ('Pizza in your cart:' + cart_get_number_of_items())
+	//alert ('Pizza in your cart:' + cart_get_number_of_items())
+
+	update_orders_input();
+}
+
+function update_orders_input()
+{
+	var orders =cart_get_orders();
+	$('#orders_input').val(orders) //# означає що звертаємося по id
 }
 
 function cart_get_number_of_items()
