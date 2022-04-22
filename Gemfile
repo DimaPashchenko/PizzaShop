@@ -8,5 +8,6 @@ gem "sinatra-contrib"
 gem "rake"
 
 group :development do
+	gem 'pry'
 	gem "tux"
 end

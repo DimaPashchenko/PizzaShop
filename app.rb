@@ -3,6 +3,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
+require 'pry'
 
 set :database, {adapter: "sqlite3", database: "pizzashop.db"}
 
@@ -20,11 +21,16 @@ end
 
 post '/cart' do
 	orders_input = params[:orders]
-	@orders = parse_orders_input orders_input
-	erb "hello #{@orders.inspect}"
+	@items = parse_orders_input(orders_input)
+
+	@items.each do |item|
+		item[0] = Product.find(item[0]).title 
+	end
+
+	erb :cart
 end
 
-def parse_orders_input orders_input
+def parse_orders_input(orders_input)
 
 	s1 = orders_input.split(/,/)
 
