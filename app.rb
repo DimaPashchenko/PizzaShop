@@ -28,9 +28,16 @@ post '/place_order' do
 end
 
 post '/cart' do
+	#отримаємо список параметрів та розкладаєм(parse) їх
 	@orders_input = params[:orders_input]
 	@items = parse_orders_input(@orders_input)
 
+	#виводимо повідомлення що корзина порожня
+	if @items.length == 0
+		return erb :cart_is_empty
+	end
+
+	#виводимо список продуктів в корзині
 	@items.each do |item|
 		item[0] = Product.find(item[0])
 	end
