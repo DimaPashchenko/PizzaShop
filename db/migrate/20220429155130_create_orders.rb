@@ -3,7 +3,7 @@ class CreateOrders < ActiveRecord::Migration[7.0]
     create_table :orders do |t|
         t.text :orders_input
         t.text :name
-        t.text :pdone
+        t.text :phone
         t.text :address
         
         t.timestamps

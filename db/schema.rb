@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_29_155130) do
   create_table "orders", force: :cascade do |t|
     t.text "orders_input"
     t.text "name"
-    t.text "pdone"
+    t.text "phone"
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
