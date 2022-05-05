@@ -42,8 +42,11 @@ post '/cart' do
 		item[0] = Product.find(item[0])
 	end
 
-
 	erb :cart
+end
+
+get '/admin' do
+	erb "Hello"
 end
 
 def parse_orders_input(orders_input)
