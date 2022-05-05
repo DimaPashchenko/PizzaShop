@@ -46,7 +46,8 @@ post '/cart' do
 end
 
 get '/admin' do
-	erb "Hello"
+	@orders = Order.order('created_at DESC')
+	erb :admin
 end
 
 def parse_orders_input(orders_input)

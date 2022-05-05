@@ -1,0 +1,22 @@
+<h2>Order list:</h2>
+
+<table class="table table-striped">
+	<thead>
+	    <tr>
+	       <th scope="col">Name</th>
+	       <th scope="col">Phone</th>
+	       <th scope="col">Delivery address</th>
+	    </tr>
+  	</thead>
+
+	<tbody>
+		<% @orders.each do |order| %>
+			<tr>
+			<td><%= order.name %></td>
+			<td><%= order.phone %></td>
+			<td><%= order.address %></td>
+		    </tr>
+		<% end %>
+	</tbody>
+
+</table>
